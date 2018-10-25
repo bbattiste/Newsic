@@ -49,11 +49,18 @@ class LoginViewController: UIViewController {
             activityIndicatorLogin.stopAnimating()
             return
         } else {
-        
-        
+            Constants.SpotifyParameterValues.Username = usernameTextField.text!
+            Constants.SpotifyParameterValues.Password = passwordTextField.text!
         }
+        
+        // postSession()
     }
     
+    // MARK: Functions
+    
+    private func completeLogin() {
+        
+    }
 
     
     
