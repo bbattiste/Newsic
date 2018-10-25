@@ -55,13 +55,45 @@
 			isa = PBXGroup;
 			children = (
 				13D631192182469100611F8F /* AppDelegate.swift */,
-				13D6312B2182633700611F8F /* LoginViewController.swift */,
+				13D63130218271B700611F8F /* Views */,
+				13D6312F2182713E00611F8F /* Model */,
+				13D6312E2182711E00611F8F /* Client Networks */,
+				13D6312D218270F700611F8F /* ViewControllers */,
 				13D6311D2182469100611F8F /* Main.storyboard */,
 				13D631202182469500611F8F /* Assets.xcassets */,
 				13D631222182469500611F8F /* LaunchScreen.storyboard */,
 				13D631252182469500611F8F /* Info.plist */,
 			);
 			path = Newsic;
+			sourceTree = "<group>";
+		};
+		13D6312D218270F700611F8F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				13D6312B2182633700611F8F /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		13D6312E2182711E00611F8F /* Client Networks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Client Networks";
+			sourceTree = "<group>";
+		};
+		13D6312F2182713E00611F8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		13D63130218271B700611F8F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
