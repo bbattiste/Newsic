@@ -27,18 +27,31 @@ class LoginViewController: UIViewController {
         }
     }
     
+    // MARK: Actions
+    
     // Link sign up button with Spotify
     @IBAction func signUp(_ sender: Any) {
         UIApplication.shared.open(URL(string : "https://www.spotify.com/us/signup/")!, options: [:], completionHandler: { (status) in
         })
     }
     
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    // Login
+    @IBAction func login(_ sender: Any) {
+        activityIndicatorLogin.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        activityIndicatorLogin.startAnimating()
+        loginButton.isEnabled = false
+        
+        debugTextLabel.text = ""
+        
+        if usernameTextField.text!.isEmpty || passwordTextField.text!.isEmpty {
+            debugTextLabel.text = "Username or Password Empty"
+            loginButton.isEnabled = true
+            activityIndicatorLogin.stopAnimating()
+            return
+        } else {
+        
+        
+        }
     }
     
 
