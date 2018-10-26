@@ -17,6 +17,7 @@
 		13D6313621829ED200611F8F /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D6313521829ED200611F8F /* NewsTableViewController.swift */; };
 		13D6313821829F7200611F8F /* SavedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D6313721829F7200611F8F /* SavedTableViewController.swift */; };
 		13D6313A2182AD0000611F8F /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D631392182AD0000611F8F /* ArticleViewController.swift */; };
+		13D6313C2183BB9700611F8F /* SpotifyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D6313B2183BB9700611F8F /* SpotifyClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		13D6313521829ED200611F8F /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		13D6313721829F7200611F8F /* SavedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewController.swift; sourceTree = "<group>"; };
 		13D631392182AD0000611F8F /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		13D6313B2183BB9700611F8F /* SpotifyClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		13D6312E2182711E00611F8F /* Client Networks */ = {
 			isa = PBXGroup;
 			children = (
+				13D6313B2183BB9700611F8F /* SpotifyClient.swift */,
 			);
 			path = "Client Networks";
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				13D6312C2182633700611F8F /* LoginViewController.swift in Sources */,
 				13D6311A2182469100611F8F /* AppDelegate.swift in Sources */,
 				13D6313A2182AD0000611F8F /* ArticleViewController.swift in Sources */,
+				13D6313C2183BB9700611F8F /* SpotifyClient.swift in Sources */,
 				13D6313421827C5500611F8F /* GCD.swift in Sources */,
 				13D6313821829F7200611F8F /* SavedTableViewController.swift in Sources */,
 				13D6313621829ED200611F8F /* NewsTableViewController.swift in Sources */,

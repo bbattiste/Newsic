@@ -12,7 +12,12 @@ import UIKit
 // Mark: Constants
 struct Constants {
     
-    
+    // MARK: Spotify
+    struct Spotify {
+        static let ApiScheme = ""
+        static let ApiHost = ""
+        static let ApiPath = ""
+    }
     
     
     // MARK: Spotify Parameter Values
