@@ -17,6 +17,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var debugTextLabel: UILabel!
     @IBOutlet weak var activityIndicatorLogin: UIActivityIndicatorView!
+    @IBOutlet var loginView: UIView!
+    
+    
     
     // Lock phone orientation
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -26,6 +29,17 @@ class LoginViewController: UIViewController {
             return .portrait
         }
     }
+    
+    //
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Enable loginView tapable to
+        loginView.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGesture))
+        loginView.addGestureRecognizer(tapGesture)
+    }
+    
     
     // MARK: Actions
     
@@ -95,11 +109,12 @@ extension LoginViewController: UITextFieldDelegate {
         }
     }
     
-    @IBAction func userDidtapView(_ sender: AnyObject) {
+    @objc func tapGesture() {
         print("viewTapped")
         resignIfFirstResponder(usernameTextField)
         resignIfFirstResponder(passwordTextField)
     }
+    
 }
 
 // MARK: - LoginViewController (Configure UI)

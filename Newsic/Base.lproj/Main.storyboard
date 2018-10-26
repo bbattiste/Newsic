@@ -114,17 +114,13 @@
                         <outlet property="activityIndicatorLogin" destination="SWK-nU-EHL" id="0dk-VZ-dyU"/>
                         <outlet property="debugTextLabel" destination="eld-SA-aVI" id="u56-pm-uy8"/>
                         <outlet property="loginButton" destination="jCU-gn-EW7" id="2fi-Gb-sZH"/>
+                        <outlet property="loginView" destination="8bC-Xf-vdC" id="ZO8-Ie-Crx"/>
                         <outlet property="passwordTextField" destination="sbo-51-1P3" id="scA-aL-bpz"/>
                         <outlet property="signupButton" destination="klo-Mn-1xn" id="uuN-cd-G6Z"/>
                         <outlet property="usernameTextField" destination="nOI-St-dZr" id="9Dm-Kd-Z9Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="yyD-P2-G4I">
-                    <connections>
-                        <action selector="userDidtapView:" destination="BYZ-38-t0r" id="1xO-Ch-fVQ"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
         </scene>
