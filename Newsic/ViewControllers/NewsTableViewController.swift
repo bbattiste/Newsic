@@ -31,7 +31,7 @@ class NewsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return testArray.count
     }
 
     
@@ -39,6 +39,7 @@ class NewsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath)
         let articleForCell = testArray[(indexPath as NSIndexPath).row]
         
+        print("cellForRowAt called")
         // Configure the cell...
         cell.textLabel?.text = articleForCell
         

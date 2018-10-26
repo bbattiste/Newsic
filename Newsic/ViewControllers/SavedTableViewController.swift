@@ -9,7 +9,8 @@
 import UIKit
 
 class SavedTableViewController: UITableViewController {
-
+    
+    var testArray = ["a", "b", "c", "d", "e"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,23 +25,26 @@ class SavedTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return testArray.count
     }
-
-    /*
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath)
+        let articleForCell = testArray[(indexPath as NSIndexPath).row]
+        
+        print("cellForRowAt called")
         // Configure the cell...
-
+        cell.textLabel?.text = articleForCell
+        
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
