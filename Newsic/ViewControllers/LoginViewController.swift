@@ -77,7 +77,7 @@ class LoginViewController: UIViewController {
         performUIUpdatesOnMain {
             self.debugTextLabel.text = ""
             self.setUIEnabled(true)
-            let controller = self.storyboard!.instantiateViewController(withIdentifier: "") as! UITabBarController
+            let controller = self.storyboard!.instantiateViewController(withIdentifier: "NewsicTabBarController") as! UITabBarController
             self.present(controller, animated: true, completion: nil)
             self.loginButton.isEnabled = true
             self.activityIndicatorLogin.stopAnimating()

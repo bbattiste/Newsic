@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--NewsicTabBarController-->
         <scene sceneID="aXG-kh-mlL">
             <objects>
-                <tabBarController id="UEA-hH-89P" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="NewsicTabBarController" title="NewsicTabBarController" id="UEA-hH-89P" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PLt-7f-GnK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -176,7 +176,7 @@
             </objects>
             <point key="canvasLocation" x="1826" y="-199"/>
         </scene>
-        <!--News Table View Controller-->
+        <!--Newsic-->
         <scene sceneID="MzE-u1-FTw">
             <objects>
                 <tableViewController id="Y2f-Fu-LR1" customClass="NewsTableViewController" customModule="Newsic" customModuleProvider="target" sceneMemberID="viewController">
@@ -185,7 +185,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="UFx-1L-vYL">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCell" id="UFx-1L-vYL">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UFx-1L-vYL" id="67Y-gQ-vBO">
@@ -199,13 +199,13 @@
                             <outlet property="delegate" destination="Y2f-Fu-LR1" id="XTW-dd-za2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="P8Q-fl-MiN"/>
+                    <navigationItem key="navigationItem" title="Newsic" id="P8Q-fl-MiN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooi-Pl-J7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2558" y="-199"/>
         </scene>
-        <!--Saved Table View Controller-->
+        <!--Newsic-->
         <scene sceneID="96R-cZ-m3t">
             <objects>
                 <tableViewController id="U6s-FT-frG" customClass="SavedTableViewController" customModule="Newsic" customModuleProvider="target" sceneMemberID="viewController">
@@ -228,7 +228,7 @@
                             <outlet property="delegate" destination="U6s-FT-frG" id="rxW-CC-kwk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="GKK-pD-bjI"/>
+                    <navigationItem key="navigationItem" title="Newsic" id="GKK-pD-bjI"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VuY-Iu-i08" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
