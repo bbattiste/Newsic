@@ -176,10 +176,10 @@
             </objects>
             <point key="canvasLocation" x="1826" y="-199"/>
         </scene>
-        <!--Table View Controller-->
+        <!--News Table View Controller-->
         <scene sceneID="MzE-u1-FTw">
             <objects>
-                <tableViewController id="Y2f-Fu-LR1" sceneMemberID="viewController">
+                <tableViewController id="Y2f-Fu-LR1" customClass="NewsTableViewController" customModule="Newsic" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ndg-XL-1EV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,10 +205,10 @@
             </objects>
             <point key="canvasLocation" x="2558" y="-199"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Saved Table View Controller-->
         <scene sceneID="96R-cZ-m3t">
             <objects>
-                <tableViewController id="U6s-FT-frG" sceneMemberID="viewController">
+                <tableViewController id="U6s-FT-frG" customClass="SavedTableViewController" customModule="Newsic" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MWT-WN-YIX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

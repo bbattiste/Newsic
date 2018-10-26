@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Enable loginView tapable to
+        // Enable loginView tapable to return from firstResponder
         loginView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGesture))
         loginView.addGestureRecognizer(tapGesture)
@@ -68,6 +68,7 @@ class LoginViewController: UIViewController {
         }
         
         // postSession()
+        completeLogin()
     }
     
     // MARK: Functions
@@ -110,7 +111,6 @@ extension LoginViewController: UITextFieldDelegate {
     }
     
     @objc func tapGesture() {
-        print("viewTapped")
         resignIfFirstResponder(usernameTextField)
         resignIfFirstResponder(passwordTextField)
     }
