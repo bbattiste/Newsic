@@ -234,20 +234,34 @@
             </objects>
             <point key="canvasLocation" x="2558" y="489"/>
         </scene>
-        <!--View Controller-->
+        <!--ArticleViewController-->
         <scene sceneID="TaB-Xc-aJO">
             <objects>
-                <viewController id="7zt-zG-reG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticleViewController" title="ArticleViewController" id="7zt-zG-reG" customClass="ArticleViewController" customModule="Newsic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0In-lX-0rS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jc-bC-Zn5">
+                                <rect key="frame" x="68" y="253" width="218" height="92"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0uK-79-vvk" firstAttribute="trailing" secondItem="5Jc-bC-Zn5" secondAttribute="trailing" constant="89" id="2LJ-Cw-fcq"/>
+                            <constraint firstItem="5Jc-bC-Zn5" firstAttribute="leading" secondItem="0uK-79-vvk" secondAttribute="leading" constant="68" id="YwT-nq-aXD"/>
+                            <constraint firstItem="0uK-79-vvk" firstAttribute="bottom" secondItem="5Jc-bC-Zn5" secondAttribute="bottom" constant="322" id="q5f-BF-ro8"/>
+                            <constraint firstItem="5Jc-bC-Zn5" firstAttribute="top" secondItem="0uK-79-vvk" secondAttribute="top" constant="233" id="xq9-GZ-RqO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0uK-79-vvk"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7UR-dI-NOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3484" y="134"/>
+            <point key="canvasLocation" x="3484" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
