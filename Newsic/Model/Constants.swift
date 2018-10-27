@@ -33,26 +33,18 @@ struct Constants {
     
     // MARK: Spotify Parameter Values
     struct SpotifyParameterValues {
-        static let ApiKeyValue = ""
-        static let ApplicationID = ""
         static var Username = ""
         static var Password = ""
-        static let ClientID = ""
-        static let ResponseType = ""
-        static let Redirect_URI = ""
+        static let ClientID = "e1371bdcd3b44517ba13621776d0ba42"
+        static let ResponseType = "code"
+        static let Redirect_URI = "newsic://"
         static let State = "" // optional
         static let Scope = "" // optional
         static let ShowDialog = "" // optional
     }
     
     
-    /* example request:
-     GET https :// accounts.spotify.com/authorize /?
-     client_id=5fe01282e44241328a84e7c5cc169165&
-     response_type=code&
-     redirect_uri=https%3A%2F%2Fexample.com%2Fcallback
-     &scope=user-read-private%20user-read-email&state=34fFs29kd09
-     */
+ 
 //---------------------------------------
 // Ideas for constants
     
@@ -132,6 +124,26 @@ struct Constants {
 
 
 /*
+example request:
+ GET https :// accounts.spotify.com/authorize /?
+ client_id=5fe01282e44241328a84e7c5cc169165&
+ response_type=code&
+ redirect_uri=https%3A%2F%2Fexample.com%2Fcallback&
+ scope=user-read-private%20user-read-email&
+ state=34fFs29kd09
+ 
+If the user accepts your request:
+ https :// example.com/callback?
+ code=NApCCg..BkWtQ&
+ state=profile%2Factivity
+ 
+If the user does not accepted your request or an error has occurred:
+ https :// example.com/callback?
+ error=access_denied&
+ state=STATE
+ 
+ -------------------------
+GET Request
 QUERY PARAMETER    VALUE
  
 -client_id    Required.
@@ -151,6 +163,20 @@ A space-separated list of scopes.If no scopes are specified, authorization will 
  
 -show_dialog    Optional.
 Whether or not to force the user to approve the app again if they’ve already done so. If false (default), a user who has already approved the application may be automatically redirected to the URI specified by redirect_uri. If true, the user will not be automatically redirected and will have to approve the app again.
+
+-------------------------
+If the user accepts your request
  
+ QUERY PARAMETER    VALUE
+ -code    An authorization code that can be exchanged for an access token.
+ -state    The value of the state parameter supplied in the request.
+
+ -------------------------
+If the user does not accepted your request or an error has occurred
+ 
+ QUERY PARAMETER    VALUE
+ -error    The reason authorization failed, for example: “access_denied”
+ -state    The value of the state parameter supplied in the request.
+
 */
 
