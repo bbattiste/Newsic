@@ -14,9 +14,20 @@ struct Constants {
     
     // MARK: Spotify
     struct Spotify {
-        static let ApiScheme = ""
-        static let ApiHost = ""
-        static let ApiPath = ""
+        static let ApiScheme = "https"
+        static let ApiHost = "accounts.spotify.com"
+        static let ApiPath = "/authorize"
+    }
+    
+    // MARK: Spotify Parameter Keys
+    
+    struct SpotifyParameterKeys {
+        static let ClientID = "client_id"
+        static let ResponseType = "response_type"
+        static let Redirect_URI = "redirect_uri"
+        static let State = "state" // optional
+        static let Scope = "scope" // optional
+        static let ShowDialog = "show_dialog" // optional
     }
     
     
@@ -26,10 +37,22 @@ struct Constants {
         static let ApplicationID = ""
         static var Username = ""
         static var Password = ""
+        static let ClientID = ""
+        static let ResponseType = ""
+        static let Redirect_URI = ""
+        static let State = "" // optional
+        static let Scope = "" // optional
+        static let ShowDialog = "" // optional
     }
     
     
-    
+    /* example request:
+     GET https :// accounts.spotify.com/authorize /?
+     client_id=5fe01282e44241328a84e7c5cc169165&
+     response_type=code&
+     redirect_uri=https%3A%2F%2Fexample.com%2Fcallback
+     &scope=user-read-private%20user-read-email&state=34fFs29kd09
+     */
 //---------------------------------------
 // Ideas for constants
     
@@ -105,4 +128,29 @@ struct Constants {
     }
     
 }
+
+
+
+/*
+QUERY PARAMETER    VALUE
+ 
+-client_id    Required.
+When you register your application, Spotify provides you a Client ID.
+ 
+-response_type    Required.
+Set to code.
+ 
+-redirect_uri    Required.
+The URI to redirect to after the user grants or denies permission. This URI needs to have been entered in the Redirect URI whitelist that you specified when you registered your application. The value of redirect_uri here must exactly match one of the values you entered when you registered your application, including upper or lowercase, terminating slashes, and such.
+ 
+-state    Optional, but strongly recommended.
+The state can be useful for correlating requests and responses. Because your redirect_uri can be guessed, using a state value can increase your assurance that an incoming connection is the result of an authentication request. If you generate a random string, or encode the hash of some client state, such as a cookie, in this state variable, you can validate the response to additionally ensure that both the request and response originated in the same browser. This provides protection against attacks such as cross-site request forgery. See RFC-6749.
+ 
+-scope    Optional.
+A space-separated list of scopes.If no scopes are specified, authorization will be granted only to access publicly available information: that is, only information normally visible in the Spotify desktop, web, and mobile players.
+ 
+-show_dialog    Optional.
+Whether or not to force the user to approve the app again if they’ve already done so. If false (default), a user who has already approved the application may be automatically redirected to the URI specified by redirect_uri. If true, the user will not be automatically redirected and will have to approve the app again.
+ 
+*/
 

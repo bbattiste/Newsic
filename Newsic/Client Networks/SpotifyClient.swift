@@ -12,6 +12,14 @@ import CoreData
 
 class SpotifyClient {
     
+    func getRequestToken() {
+        
+        /* TASK: Get a request token, then store it (appDelegate.requestToken) and login with the token */
+        
+        /* 1. Set the parameters */
+        let methodParameters = [
+            Constants.TMDBParameterKeys.ApiKey: Constants.TMDBParameterValues.ApiKey
+        ]
     
     
     
