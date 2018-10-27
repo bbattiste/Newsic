@@ -12,16 +12,24 @@ import CoreData
 
 class SpotifyClient {
     
-//    func getRequestToken() {
-//
-//        /* TASK: Get a request token, then store it (appDelegate.requestToken) and login with the token */
-//
-//        /* 1. Set the parameters */
-//        let methodParameters = [
-//            Constants.TMDBParameterKeys.ApiKey: Constants.TMDBParameterValues.ApiKey
-//        ]
-//
-//    }
+    func getRequestToken() {
+
+        /* TASK: Get a request token, then store it (appDelegate.requestToken) and login with the token */
+
+        /* 1. Set the parameters */
+        let methodParameters = [
+            Constants.SpotifyParameterKeys.ClientID: Constants.SpotifyParameterValues.ClientID,
+            Constants.SpotifyParameterKeys.ResponseType: Constants.SpotifyParameterValues.ResponseType,
+            Constants.SpotifyParameterKeys.Redirect_URI: Constants.SpotifyParameterValues.Redirect_URI
+        ]
+        
+        /* 2/3. Build the URL, Configure the request */
+        let session = URLSession.shared
+        let request = URLRequest(url: spotifyURLFromParameters(methodParameters as [String : AnyObject]))
+        print("request = \(request)")
+    }
+    
+    
     
     // MARK: Helper for Creating a URL from Parameters
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class LoginViewController: UIViewController {
     
@@ -38,8 +39,9 @@ class LoginViewController: UIViewController {
         loginView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGesture))
         loginView.addGestureRecognizer(tapGesture)
+        
+        SpotifyClient.getRequestToken()
     }
-    
     
     // MARK: Actions
     
@@ -65,6 +67,7 @@ class LoginViewController: UIViewController {
         } else {
             Constants.SpotifyParameterValues.Username = usernameTextField.text!
             Constants.SpotifyParameterValues.Password = passwordTextField.text!
+            
         }
         
         // postSession()
