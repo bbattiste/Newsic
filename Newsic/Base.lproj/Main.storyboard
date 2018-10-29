@@ -75,15 +75,41 @@
                                     <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jtn-m1-aT9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzS-Rl-agt">
+                                <rect key="frame" x="16" y="614" width="100" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0n9-P4-SwV"/>
+                                    <constraint firstAttribute="width" constant="100" id="dKx-3C-Hii"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotifyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="xy4-Ub-Zu2">
+                                <rect key="frame" x="124" y="605" width="61" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="7BY-Av-rBR"/>
+                                    <constraint firstAttribute="width" constant="61" id="PwE-O4-l0e"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotifyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="mr6-Gm-HgM">
+                                <rect key="frame" x="214" y="605" width="59" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="HeJ-dP-Bvt"/>
+                                    <constraint firstAttribute="width" constant="59" id="lhC-C5-J0k"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oKO-2l-5yq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="2Ln-oi-CYF"/>
+                            <constraint firstItem="mr6-Gm-HgM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4sf-vI-Oc8"/>
                             <constraint firstItem="SWK-nU-EHL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7e6-hS-s8g"/>
                             <constraint firstItem="sbo-51-1P3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9AO-zR-G7a"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nOI-St-dZr" secondAttribute="trailing" constant="16" id="AFr-hs-vvZ"/>
                             <constraint firstItem="eld-SA-aVI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="CjN-Fj-LIO"/>
                             <constraint firstItem="SWK-nU-EHL" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="FLE-eV-bAB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AzS-Rl-agt" secondAttribute="bottom" constant="9" id="Fk2-af-7gM"/>
                             <constraint firstItem="nOI-St-dZr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="L3Q-uY-PhU"/>
                             <constraint firstItem="sbo-51-1P3" firstAttribute="top" secondItem="nOI-St-dZr" secondAttribute="bottom" constant="8" id="MOZ-ma-PHn"/>
                             <constraint firstItem="dOj-0M-adm" firstAttribute="top" secondItem="oKO-2l-5yq" secondAttribute="bottom" constant="21" id="Mgw-47-VyC"/>
@@ -95,11 +121,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vOP-Bq-BTj" secondAttribute="trailing" constant="16" id="UbV-kH-ZUe"/>
                             <constraint firstItem="klo-Mn-1xn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="VjT-31-hgO"/>
                             <constraint firstItem="dOj-0M-adm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Wah-fp-MUG"/>
+                            <constraint firstItem="xy4-Ub-Zu2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZpX-uP-VFU"/>
                             <constraint firstItem="jCU-gn-EW7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="bUp-rQ-d9O"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eld-SA-aVI" secondAttribute="trailing" constant="16" id="dcb-Jp-feY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oKO-2l-5yq" secondAttribute="trailing" constant="68" id="jiA-BO-DOM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jCU-gn-EW7" secondAttribute="trailing" constant="68" id="k3c-oG-FeB"/>
+                            <constraint firstItem="xy4-Ub-Zu2" firstAttribute="leading" secondItem="AzS-Rl-agt" secondAttribute="trailing" constant="8" id="kBD-Qi-05c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="klo-Mn-1xn" secondAttribute="trailing" constant="161" id="kFE-ny-AQJ"/>
+                            <constraint firstItem="AzS-Rl-agt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mPr-s2-bMp"/>
+                            <constraint firstItem="mr6-Gm-HgM" firstAttribute="leading" secondItem="xy4-Ub-Zu2" secondAttribute="trailing" constant="29" id="qYf-Qk-AoG"/>
                             <constraint firstItem="eld-SA-aVI" firstAttribute="top" secondItem="klo-Mn-1xn" secondAttribute="bottom" constant="8" id="r2w-D8-0MG"/>
                             <constraint firstItem="vOP-Bq-BTj" firstAttribute="top" secondItem="jCU-gn-EW7" secondAttribute="bottom" constant="42" id="r5A-rA-EOo"/>
                             <constraint firstItem="oKO-2l-5yq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="t8N-fc-zxV"/>
@@ -264,4 +294,7 @@
             <point key="canvasLocation" x="3484" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="spotifyLogo" width="660" height="807"/>
+    </resources>
 </document>
