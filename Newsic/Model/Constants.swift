@@ -16,7 +16,7 @@ struct Constants {
     struct Spotify {
         static let ApiScheme = "https"
         static let ApiHost = "accounts.spotify.com"
-        static let ApiPath = "/authorize"
+        static let ApiPath = "/authorize/"
     }
     
     // MARK: Spotify Parameter Keys
@@ -120,7 +120,6 @@ struct Constants {
 //    }
     
 }
-
 
 
 /*
