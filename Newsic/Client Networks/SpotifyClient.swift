@@ -14,6 +14,14 @@ class SpotifyClient {
     
     static var shared = SpotifyClient()
     
+    let SpotifyClientID = Constants.SpotifyParameterValues.ClientID
+    let SpotifyRedirectURL = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
+    
+    lazy var configuration = SPTConfiguration(
+        clientID: SpotifyClientID,
+        redirectURL: SpotifyRedirectURL
+    )
+    
     func getRequestToken() {
         
         /* TASK: Get a request token, then store it (appDelegate.requestToken) and login with the token */

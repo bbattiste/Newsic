@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		133C2B7721878DB200FB00D2 /* NewsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133C2B7621878DB200FB00D2 /* NewsClient.swift */; };
+		13AA63D32187C7DE00740B4C /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AA63D22187C7DD00740B4C /* SpotifyiOS.framework */; };
 		13D6311A2182469100611F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D631192182469100611F8F /* AppDelegate.swift */; };
 		13D6311F2182469100611F8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13D6311D2182469100611F8F /* Main.storyboard */; };
 		13D631212182469500611F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13D631202182469500611F8F /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		133C2B7621878DB200FB00D2 /* NewsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsClient.swift; sourceTree = "<group>"; };
+		13AA63D22187C7DD00740B4C /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyiOS.framework; path = "../../../../Downloads/ios-sdk-1.0.0/SpotifyiOS.framework"; sourceTree = "<group>"; };
 		13D631162182469100611F8F /* Newsic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newsic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13D631192182469100611F8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13D6311E2182469100611F8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13AA63D32187C7DE00740B4C /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +57,7 @@
 			children = (
 				13D631182182469100611F8F /* Newsic */,
 				13D631172182469100611F8F /* Products */,
+				13AA63D22187C7DD00740B4C /* SpotifyiOS.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -277,8 +281,10 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "newsic-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -331,8 +337,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "newsic-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -349,8 +358,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bryborg.Newsic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "newsic-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -367,8 +378,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bryborg.Newsic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "newsic-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
