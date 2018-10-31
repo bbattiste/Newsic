@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1329383D218A41FE00199C7D /* NewsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1329383C218A41FE00199C7D /* NewsAPIManager.swift */; };
+		13293841218A555500199C7D /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13293840218A555500199C7D /* GlobalVariables.swift */; };
 		133C2B7721878DB200FB00D2 /* NewsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133C2B7621878DB200FB00D2 /* NewsClient.swift */; };
 		13D6311A2182469100611F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D631192182469100611F8F /* AppDelegate.swift */; };
 		13D6311F2182469100611F8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13D6311D2182469100611F8F /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		1329383C218A41FE00199C7D /* NewsAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPIManager.swift; sourceTree = "<group>"; };
+		13293840218A555500199C7D /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		133C2B7621878DB200FB00D2 /* NewsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsClient.swift; sourceTree = "<group>"; };
 		13D631162182469100611F8F /* Newsic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newsic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13D631192182469100611F8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				13D631312182726B00611F8F /* Constants.swift */,
+				13293840218A555500199C7D /* GlobalVariables.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				13D6313C2183BB9700611F8F /* SpotifyClient.swift in Sources */,
 				13D6313421827C5500611F8F /* GCD.swift in Sources */,
 				1329383D218A41FE00199C7D /* NewsAPIManager.swift in Sources */,
+				13293841218A555500199C7D /* GlobalVariables.swift in Sources */,
 				13D6313821829F7200611F8F /* SavedTableViewController.swift in Sources */,
 				13D6313621829ED200611F8F /* NewsTableViewController.swift in Sources */,
 				133C2B7721878DB200FB00D2 /* NewsClient.swift in Sources */,

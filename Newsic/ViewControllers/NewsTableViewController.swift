@@ -10,12 +10,17 @@ import UIKit
 
 class NewsTableViewController: UITableViewController {
     
+    @IBOutlet var newsTableView: UITableView!
+    
+
     var testArray = ["a", "b", "c", "d", "e"]
     //[[String: AnyObject]]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         NewsClient.shared.requestBandArticles()
+        newsTableView.reloadData()
         
         // Display an Edit button in the navigation bar.
         self.navigationItem.rightBarButtonItem = self.editButtonItem
@@ -24,13 +29,12 @@ class NewsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return testArray.count
+        print("GlobalVariables.articleArray.count = \(GlobalVariables.articleArray.count)")
+        return GlobalVariables.articleArray.count
     }
 
     

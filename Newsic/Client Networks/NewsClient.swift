@@ -26,7 +26,9 @@ class NewsClient: NSObject {
         let oneMonthAgoDate = Calendar.current.date(byAdding: .month, value: monthsToSubtract, to: Date())
         let oneMonthAgoUsableString = usableDate(date: oneMonthAgoDate!)
         
-        var currentArticles = [UserDefaults.standard.object(forKey: "NewsAPI-Swift Articles")]
+        //TODO: to become userdefaults
+        //var currentArticles = [UserDefaults.standard.object(forKey: "NewsAPI-Swift Articles")]
+        var currentArticles = GlobalVariables.articleArray
         
         nam.getArticles(band: band, oldestArticleDate: oneMonthAgoUsableString, key: key) {data in // Getting articles from "everything" search
             do {
@@ -38,7 +40,11 @@ class NewsClient: NSObject {
                             currentArticles.append(article)
                             //print(String(describing: article))
                         }
-                        // Use check articles Array: print(currentArticles)
+                        //print(currentArticles)
+                        GlobalVariables.articleArray = currentArticles
+                        print("GlobalVariables count in call = \(GlobalVariables.articleArray.count)")
+                        //print(GlobalVariables.articleArray)
+                        
                         // If wanting more than 1 article per artist, use this to not duplicate: !currentArticles.contains(article) {
                         //currentArticles.append(article)
                         //}
