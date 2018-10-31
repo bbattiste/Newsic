@@ -13,8 +13,8 @@ class NewsAPIManager {
     //attribution: Wyatt Mufson: https://github.com/WyattMufson/NewsAPI-Swift
     
     // TODO: If no article pops up, turn label that says "Not all of your top listened to artists have current news!" - List top artists without news.
-    func getArticles(band: String, oldestArticleDate: String, key:String, completionHandler: @escaping (Data) -> ()) {
-        // TODO: Notsure this will work, because if band name is searched, it will not matter to include other words...: Make q = section: q=\(band)OR\(band)SPACEbandOR\(band)SPACEtour& and even possibly add \(band)SPACEmusic&
+    func getArticles(band: String, oldestArticleDate: String, key: String, completionHandler: @escaping (Data) -> ()) {
+        // TODO: Not sure this will work, because if band name is searched, it will not matter to include other words...: Make q = section: q=\(band)OR\(band)SPACEbandOR\(band)SPACEtour& and even possibly add \(band)SPACEmusic&
         // sortby can be:
         //relevancy = articles more closely related to q come first.
         //popularity = articles from popular sources and publishers come first.

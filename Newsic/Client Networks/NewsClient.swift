@@ -36,7 +36,7 @@ class NewsClient: NSObject {
                     if let articles = jsonArray["articles"] as? [[String : AnyObject]] {
                         for article in articles { // Get each article, only one as of now
                             currentArticles.append(article)
-                            print(String(describing: article))
+                            //print(String(describing: article))
                         }
                         // Use check articles Array: print(currentArticles)
                         // If wanting more than 1 article per artist, use this to not duplicate: !currentArticles.contains(article) {
