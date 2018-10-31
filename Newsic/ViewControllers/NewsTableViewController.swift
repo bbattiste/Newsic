@@ -14,7 +14,9 @@ class NewsTableViewController: UITableViewController {
     //[[String: AnyObject]]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        NewsClient.shared.requestBandArticles()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

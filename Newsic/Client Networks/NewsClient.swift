@@ -10,11 +10,13 @@ import Foundation
 import UIKit
 import CoreData
 
-class NewsClient {
+class NewsClient: NSObject {
     
     //attribution: Wyatt Mufson: https://github.com/WyattMufson/NewsAPI-Swift
     
-    func giveMe() -> Bool {
+    static var shared = NewsClient()
+    
+    func requestBandArticles() -> Bool {
         
         let key = "9c9d15331d164c079625dddab874cb90"
         let nam = NewsAPIManager() // Initialize News API Manager
@@ -32,7 +34,7 @@ class NewsClient {
                 
                 if let jsonArray = json as? [String: AnyObject] {
                     if let articles = jsonArray["articles"] as? [[String : AnyObject]] {
-                        for article in articles { // Get each article
+                        for article in articles { // Get each article, only one as of now
                             currentArticles.append(article)
                             print(String(describing: article))
                         }
