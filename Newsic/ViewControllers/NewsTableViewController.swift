@@ -19,8 +19,20 @@ class NewsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NewsClient.shared.requestBandArticles()
-        newsTableView.reloadData()
+        NewsClient.shared.requestBandArticles() { (success, error) in
+            if success {
+                performUIUpdatesOnMain {
+                    self.newsTableView.reloadData()
+                }
+            } else {
+                performUIUpdatesOnMain {
+                    print(error!)
+                    //self.activityIndicatorPhoto.stopAnimating()
+                    //self.missingImagesLabel.isHidden = false
+                    //self.photoCollectionView.isScrollEnabled = true
+                }
+            }
+        }
         
         // Display an Edit button in the navigation bar.
         self.navigationItem.rightBarButtonItem = self.editButtonItem

@@ -16,7 +16,7 @@ class NewsClient: NSObject {
     
     static var shared = NewsClient()
     
-    func requestBandArticles() -> Bool {
+    func requestBandArticles(completionHandler: @escaping (_ success: Bool, _ error: String?) -> Void) {
         
         let key = "9c9d15331d164c079625dddab874cb90"
         let nam = NewsAPIManager() // Initialize News API Manager
@@ -50,13 +50,13 @@ class NewsClient: NSObject {
                         //}
                         // Use to save to userdefaults: UserDefaults.standard.set(currentArticles, forKey: "NewsAPI-Swift Articles")
                     }
+                    completionHandler(true, nil)
                 }
             } catch {
-                print("error serializing JSON: \(error)")
+                print("error serializing JSON: \(String(describing:error))")
+                completionHandler(false, String(describing: error))
             }
         }
-        
-        return true
     }
     
     // Create usable dates for client
