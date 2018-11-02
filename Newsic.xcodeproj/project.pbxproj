@@ -21,6 +21,7 @@
 		13D6313821829F7200611F8F /* SavedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D6313721829F7200611F8F /* SavedTableViewController.swift */; };
 		13D6313A2182AD0000611F8F /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D631392182AD0000611F8F /* ArticleViewController.swift */; };
 		13D6313C2183BB9700611F8F /* SpotifyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D6313B2183BB9700611F8F /* SpotifyClient.swift */; };
+		1772E08DD201373F164EA783 /* libPods-Newsic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2282CD8A9FE0314F54F226 /* libPods-Newsic.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,9 @@
 		13D6313721829F7200611F8F /* SavedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewController.swift; sourceTree = "<group>"; };
 		13D631392182AD0000611F8F /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		13D6313B2183BB9700611F8F /* SpotifyClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyClient.swift; sourceTree = "<group>"; };
+		5095F191DE3683CE148B3C27 /* Pods-Newsic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Newsic/Pods-Newsic.release.xcconfig"; sourceTree = "<group>"; };
+		AB2282CD8A9FE0314F54F226 /* libPods-Newsic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Newsic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C467F39EF607A4D040F05547 /* Pods-Newsic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Newsic/Pods-Newsic.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1772E08DD201373F164EA783 /* libPods-Newsic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +63,8 @@
 			children = (
 				13D631182182469100611F8F /* Newsic */,
 				13D631172182469100611F8F /* Products */,
+				614E6BD533356EB5CDD7C4FD /* Pods */,
+				B6B6FC21B33A68130F6DD1CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +130,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		614E6BD533356EB5CDD7C4FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C467F39EF607A4D040F05547 /* Pods-Newsic.debug.xcconfig */,
+				5095F191DE3683CE148B3C27 /* Pods-Newsic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B6B6FC21B33A68130F6DD1CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB2282CD8A9FE0314F54F226 /* libPods-Newsic.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13D631282182469500611F8F /* Build configuration list for PBXNativeTarget "Newsic" */;
 			buildPhases = (
+				F4CD08D962189DC479A54C33 /* [CP] Check Pods Manifest.lock */,
 				13D631122182469000611F8F /* Sources */,
 				13D631132182469000611F8F /* Frameworks */,
 				13D631142182469000611F8F /* Resources */,
+				F515791F6BF49EB23AF2B331 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,6 +214,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F4CD08D962189DC479A54C33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Newsic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F515791F6BF49EB23AF2B331 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Newsic/Pods-Newsic-resources.sh",
+				"${PODS_ROOT}/SpotifyLogin/SpotifyLogin/Resources/spotifylogo-32.png",
+				"${PODS_ROOT}/SpotifyLogin/SpotifyLogin/Resources/spotifylogo-32@2x.png",
+				"${PODS_ROOT}/SpotifyLogin/SpotifyLogin/Resources/spotifylogo-32@3x.png",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/spotifylogo-32.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/spotifylogo-32@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/spotifylogo-32@3x.png",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Newsic/Pods-Newsic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		13D631122182469000611F8F /* Sources */ = {
@@ -348,6 +425,7 @@
 		};
 		13D631292182469500611F8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C467F39EF607A4D040F05547 /* Pods-Newsic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -366,6 +444,7 @@
 		};
 		13D6312A2182469500611F8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5095F191DE3683CE148B3C27 /* Pods-Newsic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

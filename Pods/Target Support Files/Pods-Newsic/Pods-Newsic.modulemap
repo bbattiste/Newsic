@@ -1,0 +1,6 @@
+module Pods_Newsic {
+  umbrella header "Pods-Newsic-umbrella.h"
+
+  export *
+  module * { export * }
+}
