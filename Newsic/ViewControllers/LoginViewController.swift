@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import SpotifyLogin
 
 class LoginViewController: UIViewController {
     
@@ -21,7 +22,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var activityIndicatorLogin: UIActivityIndicatorView!
     @IBOutlet var loginView: UIView!
     
+    // MARK: Lets/Vars
     
+    static var shared = LoginViewController()
+    
+    // MARK: Lifecyle
     
     // Lock phone orientation
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -32,7 +37,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-    //
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,7 +45,17 @@ class LoginViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGesture))
         loginView.addGestureRecognizer(tapGesture)
         
-        SpotifyClient.shared.getRequestToken()
+        let button = SpotifyLoginButton(viewController: LoginViewController.shared, scopes: [.userReadTop])
+        self.view.addSubview(button)
+        
+        print("check access BEFORE button pressed")
+        checkIfAccessToken()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(completeLogin), name: .SpotifyLoginSuccessful, object: nil)
+
+        // OLD SPOTIFY CODE
+        //SpotifyClient.shared.getRequestToken()
+        
     }
     
     // MARK: Actions
@@ -54,37 +68,55 @@ class LoginViewController: UIViewController {
     
     // Login
     @IBAction func login(_ sender: Any) {
-        activityIndicatorLogin.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
-        activityIndicatorLogin.startAnimating()
-        loginButton.isEnabled = false
-        
-        debugTextLabel.text = ""
-        
-        if usernameTextField.text!.isEmpty || passwordTextField.text!.isEmpty {
-            debugTextLabel.text = "Username or Password Empty"
-            loginButton.isEnabled = true
-            activityIndicatorLogin.stopAnimating()
-            return
-        } else {
-            Constants.SpotifyParameterValues.Username = usernameTextField.text!
-            Constants.SpotifyParameterValues.Password = passwordTextField.text!
-            
-        }
-        
-        // postSession()
-        completeLogin()
+//        activityIndicatorLogin.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+//        activityIndicatorLogin.startAnimating()
+//        loginButton.isEnabled = false
+//
+//        debugTextLabel.text = ""
+//
+//        if usernameTextField.text!.isEmpty || passwordTextField.text!.isEmpty {
+//            debugTextLabel.text = "Username or Password Empty"
+//            loginButton.isEnabled = true
+//            activityIndicatorLogin.stopAnimating()
+//            return
+//        } else {
+//            Constants.SpotifyParameterValues.Username = usernameTextField.text!
+//            Constants.SpotifyParameterValues.Password = passwordTextField.text!
+//
+//        }
+//
+//        // postSession()
+//        completeLogin()
     }
     
     // MARK: Functions
     
-    private func completeLogin() {
+    @objc func completeLogin() {
+        self.activityIndicatorLogin.startAnimating()
+        let username = SpotifyLogin.shared.username
+        print("username = \(username as Any)")
+        print("check access AFTER button pressed")
+        checkIfAccessToken()
         performUIUpdatesOnMain {
             self.debugTextLabel.text = ""
             self.setUIEnabled(true)
-            let controller = self.storyboard!.instantiateViewController(withIdentifier: "NewsicTabBarController") as! UITabBarController
-            self.present(controller, animated: true, completion: nil)
+            
+//            let controller = self.storyboard!.instantiateViewController(withIdentifier: "NewsicTabBarController") as! UITabBarController
+//            self.present(controller, animated: true, completion: nil)
+            
             self.loginButton.isEnabled = true
             self.activityIndicatorLogin.stopAnimating()
+        }
+    }
+    
+    func checkIfAccessToken() {
+        SpotifyLogin.shared.getAccessToken { (accessToken, error) in
+            if error != nil {
+                // User is not logged in, show log in flow.
+                print("error = \(String(describing: error))")
+            } else {
+                print("accessToken = \(String(describing: accessToken))")
+            }
         }
     }
     
