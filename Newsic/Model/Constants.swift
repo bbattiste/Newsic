@@ -34,8 +34,9 @@ struct Constants {
     // MARK: Spotify Parameter Values
     struct SpotifyParameterValues {
         static let ClientID = "e1371bdcd3b44517ba13621776d0ba42"
+        static let ClientSecret = "5301b601351a4b5c8dad81aebf462159"
         static let ResponseType = "code"
-        static let Redirect_URI = "newsic://"
+        static let Redirect_URI = NSURL(string: "newsic://")
         static let State = "" // optional
         static let Scope = "" // optional
         static let ShowDialog = "" // optional

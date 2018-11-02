@@ -7,39 +7,21 @@
 //
 
 import UIKit
+import SpotifyLogin
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        SpotifyLogin.shared.configure(clientID: Constants.SpotifyParameterValues.ClientID, clientSecret: Constants.SpotifyParameterValues.ClientSecret, redirectURL: Constants.SpotifyParameterValues.Redirect_URI! as URL)
         return true
     }
     
-    private func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:] ) -> Bool {
-        
-        // Determine who sent the URL.
-        let sendingAppID = options[.sourceApplication]
-        print("source application = \(sendingAppID ?? "Unknown")")
-        
-        // Process the URL.
-        guard let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true),
-            let albumPath = components.path,
-            let params = components.queryItems else {
-                print("Invalid URL or album path missing")
-                return false
-        }
-        
-        if let photoIndex = params.first(where: { $0.name == "index" })?.value {
-            print("albumPath = \(albumPath)")
-            print("photoIndex = \(photoIndex)")
-            return true
-        } else {
-            print("Photo index missing")
-            return false
-        }
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let handled = SpotifyLogin.shared.applicationOpenURL(url) { (error) in }
+        return handled
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
